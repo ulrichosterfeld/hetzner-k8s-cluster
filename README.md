@@ -333,7 +333,7 @@ You can find more information at [Kubespray](https://kubespray.io/#/).
 
 [Install the NGINX Ingress Controller](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/blob/main/ingress-nginx/README.md#install-the-nginx-ingress-controller)
 
-[Test the Hetzner Kubernetes Cluster]
+[Test the Hetzner Kubernetes Cluster](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/blob/main/test/README.md#create-the-app-kuard-for-testing)
 
 
 
