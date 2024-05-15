@@ -216,6 +216,7 @@ nano all.yml
 Change the following lines:
 ```yaml
 # all.yml
+...
 ## There are some changes specific to the cloud providers
 ## for instance we need to encapsulate packets with some network plugins
 ## If set the possible values are either 'gce', 'aws', 'azure', 'openstack', 'vsphere', 'oci', or 'external'
@@ -227,6 +228,7 @@ cloud_provider: external
 ## Supported cloud controllers are: 'openstack', 'vsphere', 'huaweicloud' and 'hcloud'
 ## When openstack or vsphere are used make sure to source in the required fields
 external_cloud_provider: hcloud
+...
 ```
 
 Change settings for hcloud.yml
