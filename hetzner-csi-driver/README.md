@@ -136,7 +136,6 @@ df -h
 #Output
 Filesystem                Size      Used Available Use% Mounted on
 ...
-tmpfs                    64.0M         0     64.0M   0% /dev
 /dev/disk/by-id/scsi-0HC_Volume_100707107
                           9.7G     24.0K      9.7G   0% /data
 ...
