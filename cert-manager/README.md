@@ -38,7 +38,7 @@ Configure a Let's Encrypt Issuer
 
 We'll set up two issuers for Let's Encrypt in this example: staging and production.
 
-Create this definition locally and update the email address to your own. This email is required by Let's Encrypt and used to notify you of certificate expiration and updates.
+> Create this definition locally and update the email address to your own. This email is required by Let's Encrypt and used to notify you of certificate expiration and updates.
 ```shell
 nano staging-issuer.yaml
 ```
@@ -105,6 +105,7 @@ kubectl describe issuer letsencrypt-staging
 ```shell
 kubectl describe issuer letsencrypt-prod
 ```
+Get all issuers
 
 ```shell
 kubectl get issuer.cert-manager.io
