@@ -325,11 +325,15 @@ ansible-playbook -i inventory/avalon-k8s/hosts.yaml --become --become-user=root 
 ```
 You can find more information at [Kubespray](https://kubespray.io/#/).
 
-## Next steps
+## Next Steps
 
 [Install the Kubernetes Hetzner Cloud csi-driver](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/tree/main/hetzner-csi-driver#install-the-kubernetes-hetzner-cloud-csi-driver)
 
 [Install the Cert Manager and Let's Encrypt Issuers](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/blob/main/cert-manager/README.md#install-the-cert-manager-and-lets-encrypt-issuers)
+
+[Install the NGINX Ingress Controller]
+
+[Test the Hetzner Kubernetes Cluster]
 
 
 
