@@ -329,7 +329,7 @@ You can find more information at [Kubespray](https://kubespray.io/#/).
 
 [Install the Kubernetes Hetzner Cloud csi-driver](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/tree/main/hetzner-csi-driver#install-the-kubernetes-hetzner-cloud-csi-driver)
 
-[Install the Cert Manager and Let's Encrypt Issuers]
+[Install the Cert Manager and Let's Encrypt Issuers](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/blob/main/cert-manager/README.md#install-the-cert-manager-and-lets-encrypt-issuers)
 
 
 
