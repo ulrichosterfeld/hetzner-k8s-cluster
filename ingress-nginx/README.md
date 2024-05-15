@@ -1,12 +1,12 @@
 ## Install the NGINX Ingress Controller
 
-Create an ingress-values.yaml (with the necessary annotations).	
-
 The Hetzner Cloud Controller Manager watches Services with `type: LoadBalancer` and creates Hetzner Cloud Load Balancers for them, adds Kubernetes Nodes as targets for the Load Balancer.
 
-We use several Hetzner load balancer annotations in our ingress-values.yaml file so that the Load Balancer is created in the way we want.
-
 You can find detailed information at [Hetzner Load Balancers](https://github.com/hetznercloud/hcloud-cloud-controller-manager/blob/main/docs/load_balancers.md).
+
+Create an ingress-values.yaml	
+
+We use several Hetzner load balancer annotations in our ingress-values.yaml file so that the Load Balancer is created in the way we want.
 
 ```shell
 nano ingress-values.yaml
