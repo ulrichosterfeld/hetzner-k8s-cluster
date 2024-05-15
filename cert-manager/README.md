@@ -1,4 +1,4 @@
-## Install the Cert Manager
+## Install the Cert Manager and Let's Encrypt Issuers
 
 Add the Helm repository
 
