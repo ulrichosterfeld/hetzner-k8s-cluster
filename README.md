@@ -341,7 +341,7 @@ Install Kubectl on your operation system.
 After we installed kubectl we copy the kubeconfig to our local machine.
 
 ```shell
-scp root@49.13.148.237:/home/root/.kube/config $HOME/.kube/hetzner-cloud
+scp root@49.13.148.237:/root/.kube/config $HOME/.kube/hetzner-cloud
 ```
 
 We export $HOME/.kube/hetzner-cloud as an environment variable so that kubectl will use our kubeconfig.
