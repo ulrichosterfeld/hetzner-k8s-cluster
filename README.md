@@ -134,7 +134,9 @@ Clone the kubespray repository (in projects/kubernetes)
 ```shell
 git clone https://github.com/kubernetes-sigs/kubespray.git
 ```
-
+```shell
+apt install python3.10-venv
+```
 Install Ansible
 ```shell
 VENVDIR=kubespray-venv
@@ -143,7 +145,6 @@ python3 -m venv $VENVDIR
 source $VENVDIR/bin/activate
 cd $KUBESPRAYDIR
 pip install -U -r requirements.txt
-cd ~
 ```
 
 ## Kubernetes Cluster Installation with KUBESPRAY (on the server k8s-cp-01)
@@ -163,8 +164,6 @@ Control Plane: k8s-cp-01 (172.16.0.2)
 Worker Node: k8s-wrk-01 (172.16.0.3) 
 
 ```shell
-apt install python3-pip
-pip install ruamel.yaml
 declare -a IPS=(172.16.0.2 172.16.0.3)
 CONFIG_FILE=inventory/avalon-k8s/hosts.yaml python3 contrib/inventory_builder/inventory.py ${IPS[@]}
 ```
@@ -340,10 +339,10 @@ Install Kubectl on your operation system.
 After we installed kubectl we copy the kubeconfig to our local machine.
 
 ```shell
-scp root@49.13.148.237:/home/root/.kubeconfig/config $HOME/.kube/hetzner-cloud
+scp root@49.13.148.237:/home/root/.kube/config $HOME/.kube/hetzner-cloud
 ```
 
-Next, we export $HOME/.kube/hetzner-cloud as an environment variable so that kubectl will use our kubeconfig.
+We export $HOME/.kube/hetzner-cloud as an environment variable so that kubectl will use our kubeconfig.
 
 (If you don’t have another kubeconfig before, you can also copy the kubeconfig with scp into the `$HOME/.kube/config` file.
 In this case, the path of the kubeconfig does not need to be exported as an environment variable.)
@@ -360,9 +359,9 @@ kubectl get nodes
 
 The above command should show us something like
 ```shell
-NAME           STATUS   ROLES                  AGE   VERSION
-k8s-cp-01      Ready    control-plane,master   8d    v1.29
-k8s-wrk-01     Ready    node,worker            8d    v1.29
+NAME         STATUS   ROLES           AGE     VERSION
+k8s-cp-01    Ready    control-plane   4m6s    v1.29.4
+k8s-wrk-01   Ready    <none>          3m11s   v1.29.4
 ```
 
 ## Install HELM3 on your local machine
