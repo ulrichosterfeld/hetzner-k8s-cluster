@@ -99,6 +99,7 @@ kubectl create -f production-issuer.yaml
 Both of these issuers are configured to use the HTTP01 challenge provider.
 
 Check on the status of the issuers after you create it:
+
 Staging issuer
 
 ```shell
