@@ -324,3 +324,7 @@ or you can scale the cluster (e.g. additional nodes) with
 ansible-playbook -i inventory/avalon-k8s/hosts.yaml --become --become-user=root scale.yml
 ```
 You can find more information at [Kubespray](https://kubespray.io/#/).
+
+##Next steps
+
+https://github.com/ulrichosterfeld/hetzner-k8s-cluster/tree/main/hetzner-csi-driver#install-the-kubernetes-hetzner-cloud-csi-driver
