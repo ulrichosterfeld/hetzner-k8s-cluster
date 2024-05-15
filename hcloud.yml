@@ -1,1 +1,8 @@
-
+# hcloud.yml (replace YOUR_HETZNER_API_TOKEN with your own hcloud token)
+external_hcloud_cloud:
+  hcloud_api_token: "YOUR_HETZNER_API_TOKEN"
+  token_secret_name: hcloud
+  with_networks: true   
+  network_name: network-1 
+  service_account_name: cloud-controller-manager
+  controller_image_tag: "latest"
