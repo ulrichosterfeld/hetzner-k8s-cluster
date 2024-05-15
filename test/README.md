@@ -1,5 +1,8 @@
 ## Create the app kuard (for testing)
 
+Prerequisites:
+Cert-Manager and Ingress-Nginx must be installed
+
 ```shell
 nano kuard.yaml
 ```
