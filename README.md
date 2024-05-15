@@ -327,5 +327,7 @@ You can find more information at [Kubespray](https://kubespray.io/#/).
 
 ## Next steps
 
-[Install the Kubernetes HETZNER csi driver](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/tree/main/hetzner-csi-driver#install-the-kubernetes-hetzner-cloud-csi-driver)
+[Install the Kubernetes Hetzner Cloud csi-driver](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/tree/main/hetzner-csi-driver#install-the-kubernetes-hetzner-cloud-csi-driver)
+
+
 
