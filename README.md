@@ -331,7 +331,7 @@ You can find more information at [Kubespray](https://kubespray.io/#/).
 
 [Install the Cert Manager and Let's Encrypt Issuers](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/blob/main/cert-manager/README.md#install-the-cert-manager-and-lets-encrypt-issuers)
 
-[Install the NGINX Ingress Controller]
+[Install the NGINX Ingress Controller](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/blob/main/ingress-nginx/README.md#install-the-nginx-ingress-controller)
 
 [Test the Hetzner Kubernetes Cluster]
 
