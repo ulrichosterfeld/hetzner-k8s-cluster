@@ -326,10 +326,10 @@ ansible-playbook -i inventory/avalon-k8s/hosts.yaml --become --become-user=root 
 You can find more information at [Kubespray](https://kubespray.io/#/).
 
 ## Install Kubectl on your local machine
-> The kubectl command line tool manages your Kubernetes clusters. Kubectl reads the file $HOME/.kube/config to access our cluster. 
+> The kubectl command line tool manages our Kubernetes Cluster. Kubectl reads the file $HOME/.kube/config to access our cluster. 
 You can specify other  [kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) files by setting the KUBECONFIG environment variable or by setting the  [—kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) flag.  
 
-Install Kubectl on your operation system to manage our Kubernetes-Cluster 
+Install Kubectl on your operation system. 
 
 * [Install and Set Up kubectl on Linux | Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
 * [Install and Set Up kubectl on macOS | Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
@@ -344,6 +344,7 @@ scp root@49.13.148.237:/home/root/.kubeconfig/config $HOME/.kube/hetzner-cloud
 ```
 
 Next, we export $HOME/.kube/hetzner-cloud as an environment variable so that kubectl will use our kubeconfig.
+
 (If you don’t have another kubeconfig before, you can also copy the kubeconfig with scp into the `$HOME/.kube/config` file.
 In this case, the path of the kubeconfig does not need to be exported as an environment variable.)
 
@@ -364,7 +365,7 @@ k8s-cp-01      Ready    control-plane,master   8d    v1.29
 k8s-wrk-01     Ready    node,worker            8d    v1.29
 ```
 
-## HELM3
+## Install HELM3 on your local machine
 Now that we have access to our Kubernetes cluster from our local working machine, we still need HELM3 for the next steps.
 
 Helm is a package manager for Kubernetes. With Helm you find, share, and deploy software packages built for Kubernetes.  
