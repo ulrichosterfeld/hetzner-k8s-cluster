@@ -325,6 +325,52 @@ ansible-playbook -i inventory/avalon-k8s/hosts.yaml --become --become-user=root 
 ```
 You can find more information at [Kubespray](https://kubespray.io/#/).
 
+## Install Kubectl on your local machine
+> The kubectl command line tool lets you control Kubernetes clusters. For configuration, kubectl looks for a file named config in the $HOME/.kube directory. You can specify other  [kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)  files by setting the KUBECONFIG environment variable or by setting the  [—kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)  flag.  
+
+Install Kubectl to manage our Kubernetes-Cluster for your operation system
+
+* [Install and Set Up kubectl on Linux | Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+* [Install and Set Up kubectl on macOS | Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
+* [Install and Set Up kubectl on Windows | Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
+
+### Get the Kubeconfig
+
+After we installed kubectl we need the Kubeconfig to access our cluster.
+
+```shell
+scp root@49.13.148.237:/home/root/.kubeconfig/config $HOME/.kube/hetzner-cloud
+```
+
+After we got the kubeconfig we can export the path of the kubeconfig as environment variable, so that Kubectl will use our config, if you don’t have another kubeconfig before, you can also use the default path `$home/.kube/config`.
+
+```shell
+export KUBECONFIG=$HOME/.kube/hetzner-cloud
+```
+
+After we have exported the environment variable, we can briefly check if it works.
+
+```shell
+kubectl get nodes
+```
+
+The above command should show us something like
+```shell
+NAME           STATUS   ROLES                  AGE   VERSION
+k8s-cp-01      Ready    control-plane,master   8d    v1.292.5
+k8s-wrk-01     Ready    node,worker            8d    v1.22.5
+```
+
+## HELM3
+Now that we have access to our Kubernetes cluster from our local working machine, we still need HELM3 for the next steps.
+
+> The package manager for Kubernetes  
+> Helm is the best way to find, share, and use software built for  [Kubernetes](https://kubernetes.io/) .  
+
+I also recommend reading the Helm documentation on how to [Install Helm](https://helm.sh/docs/intro/install/) on your operating system.
+
+Helm is a wonderful tool with which you can deploy packages in your Kubernetes cluster. You can build your own Helm packages or you can use the packages of the software vendors.
+
 ## Next Steps
 
 [Install the Kubernetes Hetzner Cloud csi-driver](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/tree/main/hetzner-csi-driver#install-the-kubernetes-hetzner-cloud-csi-driver)
