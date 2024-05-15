@@ -126,7 +126,7 @@ ID        NAME      HEALTH    IPV4          IPV6                   TYPE   LOCATI
 ```
 ### Point your domain to the load balancer
 
-Now that we have deployed the ingress-nginx and obtained a load balancer through the hcloud-cloud-controller-manager, we can point our domain to the load balancer's IPs.
+We have deployed the ingress-nginx and obtained a load balancer through the hcloud-cloud-controller-manager. Now we can point our domain to the load balancer's IPs.
 
 So you can go to the Domain Registrar of your choice and set the A-Record to the IPV4 and the AAA-Record to the IPV6 of the load balancer.
 
