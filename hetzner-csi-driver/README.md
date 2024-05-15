@@ -135,22 +135,11 @@ df -h
 ```
 #Output
 Filesystem                Size      Used Available Use% Mounted on
-overlay                 225.0G      5.6G    210.2G   3% /
+...
 tmpfs                    64.0M         0     64.0M   0% /dev
 /dev/disk/by-id/scsi-0HC_Volume_100707107
                           9.7G     24.0K      9.7G   0% /data
-/dev/sda1               225.0G      5.6G    210.2G   3% /etc/hosts
-/dev/sda1               225.0G      5.6G    210.2G   3% /dev/termination-log
-/dev/sda1               225.0G      5.6G    210.2G   3% /etc/hostname
-/dev/sda1               225.0G      5.6G    210.2G   3% /etc/resolv.conf
-shm                      64.0M         0     64.0M   0% /dev/shm
-tmpfs                    30.5G     12.0K     30.5G   0% /var/run/secrets/kubernetes.io/serviceaccount
-tmpfs                    15.3G         0     15.3G   0% /proc/acpi
-tmpfs                    64.0M         0     64.0M   0% /proc/kcore
-tmpfs                    64.0M         0     64.0M   0% /proc/keys
-tmpfs                    64.0M         0     64.0M   0% /proc/timer_list
-tmpfs                    15.3G         0     15.3G   0% /proc/scsi
-tmpfs                    15.3G         0     15.3G   0% /sys/firmware
+...
 / #
 ```
 Exit the app shell
