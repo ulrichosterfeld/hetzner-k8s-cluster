@@ -325,6 +325,7 @@ ansible-playbook -i inventory/avalon-k8s/hosts.yaml --become --become-user=root 
 ```
 You can find more information at [Kubespray](https://kubespray.io/#/).
 
-##Next steps
+## Next steps
 
-https://github.com/ulrichosterfeld/hetzner-k8s-cluster/tree/main/hetzner-csi-driver#install-the-kubernetes-hetzner-cloud-csi-driver
+[Install the Kubernetes HETZNER csi driver](https://github.com/ulrichosterfeld/hetzner-k8s-cluster/tree/main/hetzner-csi-driver#install-the-kubernetes-hetzner-cloud-csi-driver)
+
