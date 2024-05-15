@@ -1,5 +1,5 @@
 # hetzner-k8s-cluster
-Installation of a Kubernetes cluster in the Hetzer Cloud
+Installation of a Kubernetes cluster in the Hetzer Cloud using KUBESPRAY
 
 
 ## Create a Hetzner account
