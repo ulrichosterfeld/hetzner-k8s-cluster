@@ -4,7 +4,7 @@ The Hetzner Cloud Controller Manager watches Services with `type: LoadBalancer` 
 
 You can find detailed information at [Hetzner Load Balancers](https://github.com/hetznercloud/hcloud-cloud-controller-manager/blob/main/docs/load_balancers.md).
 
-Create an ingress-values.yaml	
+Create an ingress-values.yaml	file.
 
 We use several Hetzner load balancer annotations in our ingress-values.yaml file so that the Load Balancer is created in the way we want.
 
