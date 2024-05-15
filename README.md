@@ -134,6 +134,8 @@ Clone the kubespray repository (in projects/kubernetes)
 ```shell
 git clone https://github.com/kubernetes-sigs/kubespray.git
 ```
+
+Install the python3-venv package
 ```shell
 apt install python3.10-venv
 ```
