@@ -98,90 +98,11 @@ kubectl create -f production-issuer.yaml
 ```
 Both of these issuers are configured to use the HTTP01 challenge provider.
 
-Check on the status of the issuer after you create it:
+Check on the status of the issuers after you create it:
 ```shell
 kubectl describe issuer letsencrypt-staging
-```
-```
-#Output
-Name:         letsencrypt-staging
-Namespace:    default
-Labels:       <none>
-Annotations:  kubectl.kubernetes.io/last-applied-configuration={"apiVersion":"cert-manager.io/v1","kind":"Issuer","metadata":{"annotations":{},"name":"letsencrypt-staging","namespace":"default"},(...)}
-API Version:  cert-manager.io/v1
-Kind:         Issuer
-Metadata:
-  Cluster Name:
-  Creation Timestamp:  2018-11-17T18:03:54Z
-  Generation:          0
-  Resource Version:    9092
-  Self Link:           /apis/cert-manager.io/v1/namespaces/default/issuers/letsencrypt-staging
-  UID:                 25b7ae77-ea93-11e8-82f8-42010a8a00b5
-Spec:
-  Acme:
-    Email:  email@example.com
-    Private Key Secret Ref:
-      Key:
-      Name:  letsencrypt-staging
-    Server:  https://acme-staging-v02.api.letsencrypt.org/directory
-    Solvers:
-      Http 01:
-        Ingress:
-          Class:  nginx
-Status:
-  Acme:
-    Uri:  https://acme-staging-v02.api.letsencrypt.org/acme/acct/7374163
-  Conditions:
-    Last Transition Time:  2018-11-17T18:04:00Z
-    Message:               The ACME account was registered with the ACME server
-    Reason:                ACMEAccountRegistered
-    Status:                True
-    Type:                  Ready
-Events:                    <none>
-```
-```shell
 kubectl describe issuer letsencrypt-prod
 ```
-```
-#Output
-Name:         letsencrypt-prod
-Namespace:    default
-Labels:       <none>
-Annotations:  <none>
-API Version:  cert-manager.io/v1
-Kind:         Issuer
-Metadata:
-  Creation Timestamp:  2024-05-09T07:43:03Z
-  Generation:          1
-  Resource Version:    356029
-  UID:                 9f3f55a3-657a-4d4a-b3f1-aa994dc0b887
-Spec:
-  Acme:
-    Email:  ulrich.osterfeld@avalon-it-service.de
-    Private Key Secret Ref:
-      Name:  letsencrypt-prod
-    Server:  https://acme-v02.api.letsencrypt.org/directory
-    Solvers:
-      http01:
-        Ingress:
-          Ingress Class Name:  nginx
-Status:
-  Acme:
-    Last Private Key Hash:  cmxxsWq415bnYVUCQH49qQjxD5Gmi1R+W98jp9N1QM4=
-    Last Registered Email:  ulrich.osterfeld@avalon-it-service.de
-    Uri:                    https://acme-v02.api.letsencrypt.org/acme/acct/1716968097
-  Conditions:
-    Last Transition Time:  2024-05-09T07:43:04Z
-    Message:               The ACME account was registered with the ACME server
-    Observed Generation:   1
-    Reason:                ACMEAccountRegistered
-    Status:                True
-    Type:                  Ready
-Events:                    <none>
-```
-You should see the issuer listed with a registered account.
-
-List issuers
 
 ```shell
 kubectl get issuer.cert-manager.io
